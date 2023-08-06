@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 30px;
+    background-color:lightslategray;
+}
+.form-name{
+    position: relative;
+    width: 250px;
+}
+.form-name input{
+ width: 100%;
+ padding: 10px;
+ border: 1px solid paleturquoise;
+ outline: none;
+ color: coral;
+ font-size: 1em;
+ transition: 0.5s;
+}
+.form-name span{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: rgb(100, 86, 86);
+    text-transform: uppercase;
+}
+.form-name input:valid ~ span ,
+.form-name input:focus ~ span {
+    color: rgb(16, 3, 19);
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background: none;
+    border-left: 1px solid rgb(2, 23, 23);
+    border-right: 1px solid rgb(0, 6, 6);
+    letter-spacing: 0.2em;
+}
+.form-name input:valid,
+.form-name input:focus{
+    border: 5px solid rgb(33, 219, 219);
+}
+.form-name :nth-child(2) input:valid ~ span ,
+.form-name :nth-child(2) input:focus ~ span{
+    background-color: palegreen;
+    color: black;
+    border-radius: 2px;
+}
+button{
+    margin-left: 14%;
+    width: 70px;
+    height: 6vh;
+    background-color: chocolate;
+}
+.form-link{
+    margin-top: 1%;
+    padding-right: 13%;
+}
